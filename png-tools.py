@@ -61,17 +61,17 @@ def createFilename():
 
 
 
-filename    = 'Resources/homer.png'
-# filename    = 'Resources/qiskit.png'
+# filename    = 'Resources/homer.png'
+# # filename    = 'Resources/qiskit.png'
 
-img         = read(filename)
+# img         = read(filename)
 
-gray        = rgbImage2grayVector(img)
+# gray        = rgbImage2grayVector(img)
 
-# print(gray)
+# # print(gray)
 
-save(img)
-# show(img)
+# save(img)
+# # show(img)
 
 
 
