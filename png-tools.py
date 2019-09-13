@@ -66,7 +66,7 @@ filename    = 'Resources/homer.png'
 
 img         = read(filename)
 
-gray        = rgb2gray(img)
+gray        = rgbImage2grayVector(img)
 
 # print(gray)
 
