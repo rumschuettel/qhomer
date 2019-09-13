@@ -37,7 +37,7 @@ def plot(title, x, y, x_err=None, y_err=None,
 ()
 
 
-x = np.array([0, 1, 2, 3, 4, 5])
-y = np.array([i**2 + random.random() for i in x])
+# x = np.array([0, 1, 2, 3, 4, 5])
+# y = np.array([i**2 + random.random() for i in x])
 
-plot('Test', x, y)
+# plot('Test', x, y)
