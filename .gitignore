@@ -106,3 +106,6 @@ venv.bak/
 # amandas stuff
 amanda/
 amanda-main.py
+#gal's stuff
+gal_main.py
+.gitignore
