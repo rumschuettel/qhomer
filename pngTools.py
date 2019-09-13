@@ -85,19 +85,19 @@ def createFilename():
 
 # filename    = 'Resources/homer.png'
 
-filename    = 'Resources/homer.png'
+# filename    = 'Resources/homer.png'
 
-# get colour image
-img         = read(filename)
+# # get colour image
+# img         = read(filename)
 
-# turn to gray vector
-grayVector  = rgbImage2grayVector(img)
+# # turn to gray vector
+# grayVector  = rgbImage2grayVector(img)
 
-img2        = grayVector2rgbImage(grayVector)
+# img2        = grayVector2rgbImage(grayVector)
 
-show(img)
+# show(img)
 
-show(img2)
+# show(img2)
 
 
 # img         = read(filename)
