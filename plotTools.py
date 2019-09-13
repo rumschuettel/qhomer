@@ -16,15 +16,14 @@ PINK    = '#f141f4'
 GREY    = '#5b5f66'
 BLACK   = '#000000'
 
-font = {'family': 'serif',
+font = {'fontname':'Helvetica',
 'weight': 'normal',
 'size': 13,
 }
 
 def plot(title, x, y, x_err=None, y_err=None,
-        colour = 'm', marker = '.', markersize = 4, linestyle = '',
+        colour = ORANGE, marker = '.', markersize = 4, linestyle = '',
         xlabel = '', ylabel = '',
-        scientific = True,
         show = True):
 
     plt.errorbar(x, y, xerr=x_err, yerr=y_err, color = colour, marker = marker, markersize = markersize, linestyle = linestyle, linewidth = 1)
@@ -33,8 +32,7 @@ def plot(title, x, y, x_err=None, y_err=None,
     plt.grid(True)
     plt.xlabel(xlabel, fontdict = font)
     plt.ylabel(ylabel, fontdict = font)
-    if (scientific):
-        plt.ticklabel_format(style='sci', scilimits=(0,0))
+
     if (show):
         plt.show()
 ()
