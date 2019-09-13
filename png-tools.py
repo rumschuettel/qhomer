@@ -28,15 +28,16 @@ def black_and_whitefy(img):
                 img[row_index][pixel_index][rgb_index] = round(rgbval)
     return img
 
-def rgb2gray(img):
+def rgbImage2grayVector(img):
+    """ Turns a row and column rgb image into a 1D grayscale vector """
     gray = []
     for row_index in range(0, len(img)):
         for pixel_index, pixel in enumerate(img[row_index]):
-            gray.append(rgb2gray_pixel(pixel))
+            gray.append(rgbPixel2grayscaleValue(pixel))
 
     return gray
 
-def rgb2gray_pixel(rgb):
+def rgbPixel2grayscaleValue(rgb):
     r, g, b = rgb[0], rgb[1], rgb[2]
     gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
     return gray
@@ -60,14 +61,14 @@ def createFilename():
 
 
 
-filename    = 'Resources/test.png'
+filename    = 'Resources/homer.png'
 # filename    = 'Resources/qiskit.png'
 
 img         = read(filename)
 
 gray        = rgb2gray(img)
 
-print(gray)
+# print(gray)
 
 save(img)
 # show(img)
