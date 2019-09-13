@@ -8,17 +8,17 @@ from numpy import real, imag
 def get_points(file):
     paths = svgpathtools.svg2paths2(file)
     res = []
-    for path in paths[0]:
+    for i, path in enumerate(paths[0]):
         pathpoints = []
         for seg in path._segments:
             count = math.ceil(seg.length()/2)
             frac = 1.0/count
-            if svgpathtools.is_bezier_segment(seg):
-                for i in range(1, count):
-                    pathpoints.append(seg.point(frac*i))
+            for i in range(1, count):
+                pathpoints.append(seg.point(frac*i))
         res.append(pathpoints)
-
-    return res
+    f = lambda x: x.start
+    starts = list(map(lambda i: f(i),paths[0]))
+    return res, starts
 
 
 def flip_x(input):
@@ -33,6 +33,9 @@ def flip_y(input):
     """flips the imaginary values of all of the points, do THAT for good results"""
     res = []
     for line in input:
-        max_y = imag(max(line , key=(lambda y: (imag(y)))))
-        res.append(list(map(lambda y: complex(real(y),max_y-imag(y)),line)))
+        #max_y = imag(max(line , key=(lambda y: (imag(y)))))
+        res.append(list(map(lambda y: complex(real(y),-imag(y)),line)))
     return res
+def offset(line, dx, dy):
+    return list(map(lambda p:complex(real(p)+dx,imag(p)+dy),line))
+        
