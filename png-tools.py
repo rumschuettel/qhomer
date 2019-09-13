@@ -1,5 +1,6 @@
 from matplotlib import pyplot
 import os
+import math
 
 def read(filename):
     """ Reads an image with pyplot """
@@ -21,12 +22,16 @@ def divider():
     """ Prints a divider """
     print('-----------------------------')
 
-def black_and_whitefy(img):
+def colour2bw(img):
     for row_index in range(0, len(img)):
         for pixel_index, pixel in enumerate(img[row_index]):
             for rgb_index, rgbval in enumerate(pixel):
                 img[row_index][pixel_index][rgb_index] = round(rgbval)
     return img
+
+def colour2gray(img):
+    return grayVector2rgbImage(rgbImage2grayVector(img))
+
 
 def rgbImage2grayVector(img):
     """ Turns a row and column rgb image into a 1D grayscale vector """
@@ -36,6 +41,23 @@ def rgbImage2grayVector(img):
             gray.append(rgbPixel2grayscaleValue(pixel))
 
     return gray
+
+def grayVector2rgbImage(gray):
+    """ Turns a 1D grayscale vector into an rgb image. Only works for square images """
+    img = []
+    # get sidelength
+    length = math.sqrt(len(gray))
+
+    gray_index = 0
+    for row_index in range(0, int(length)):
+        img.append([])
+        for column_index in range (0, int(length)):
+            value = gray[gray_index]
+            gray_index += 1
+            img[row_index].append([value, value, value])
+
+    return img
+
 
 def rgbPixel2grayscaleValue(rgb):
     r, g, b = rgb[0], rgb[1], rgb[2]
@@ -62,7 +84,21 @@ def createFilename():
 
 
 # filename    = 'Resources/homer.png'
-# # filename    = 'Resources/qiskit.png'
+
+filename    = 'Resources/homer.png'
+
+# get colour image
+img         = read(filename)
+
+# turn to gray vector
+grayVector  = rgbImage2grayVector(img)
+
+img2        = grayVector2rgbImage(grayVector)
+
+show(img)
+
+show(img2)
+
 
 # img         = read(filename)
 
