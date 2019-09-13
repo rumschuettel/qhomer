@@ -1,5 +1,5 @@
 from matplotlib import pyplot
-
+import os
 
 def read(filename):
     """ Reads an image with pyplot """
@@ -8,9 +8,8 @@ def read(filename):
 
 def save(img):
     """ Saves an image to the output folder. Call BEFORE show """
-    filename = createFilename
-    pyplot.savefig('output.png')
-
+    filename = createFilename()
+    pyplot.savefig(filename)
 
 def show(img):
     """ Shows an image with pyplot """
@@ -39,7 +38,6 @@ def rgb2gray(img):
 def rgb2gray_pixel(rgb):
     r, g, b = rgb[0], rgb[1], rgb[2]
     gray = 0.2989 * r + 0.5870 * g + 0.1140 * b
-
     return gray
 
 def createFilename():
@@ -70,7 +68,7 @@ gray        = rgb2gray(img)
 
 print(gray)
 
-
+save(img)
 show(img)
 
 
