@@ -9,7 +9,8 @@ def read(filename):
 def save(img):
     """ Saves an image to the output folder. Call BEFORE show """
     filename = createFilename()
-    pyplot.savefig(filename)
+    pyplot.imsave(filename, img)
+    print('Saved as ' + filename)
 
 def show(img):
     """ Shows an image with pyplot """
@@ -69,7 +70,7 @@ gray        = rgb2gray(img)
 print(gray)
 
 save(img)
-show(img)
+# show(img)
 
 
 
