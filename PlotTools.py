@@ -23,33 +23,24 @@ font = {'family': 'serif',
 
 def plot(title, x, y, x_err=None, y_err=None,
         colour = 'm', marker = '.', markersize = 4, linestyle = '',
-        xlabel = '', ylabel = '', name = '', legendtitle = '',
-        scientific = True, xlog = False, ylog = False,
+        xlabel = '', ylabel = '',
+        scientific = True,
         show = True):
 
-    if (name == ''):
-        plt.errorbar(x, y, xerr=x_err, yerr=y_err, color = colour, marker = marker, markersize = markersize, linestyle = linestyle, linewidth = 1, label = name)
-    else:
-        plt.errorbar(x, y, xerr=x_err, yerr=y_err, color = colour, marker = marker, markersize = markersize, linestyle = linestyle, linewidth = 1, label = name)
+    plt.errorbar(x, y, xerr=x_err, yerr=y_err, color = colour, marker = marker, markersize = markersize, linestyle = linestyle, linewidth = 1)
 
     plt.title(title, fontdict = font)
     plt.grid(True)
-    if (name != ''):
-        plt.legend(prop = font, title = legendtitle)
     plt.xlabel(xlabel, fontdict = font)
     plt.ylabel(ylabel, fontdict = font)
     if (scientific):
         plt.ticklabel_format(style='sci', scilimits=(0,0))
-    if (xlog):
-        plt.xscale('log')
-    if (ylog):
-        plt.yscale('log')
     if (show):
         plt.show()
 ()
 
 
-x = np.array([0, 1, 2, 3, 4, 5])
-y = np.array([i**2 + random.random() for i in x])
+# x = np.array([0, 1, 2, 3, 4, 5])
+# y = np.array([i**2 + random.random() for i in x])
 
-plot('test', x, y)
+# plot('test', x, y)
