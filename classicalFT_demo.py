@@ -5,7 +5,7 @@ from pprint import pprint
 """
 Get gray vector
 """
-filename        = 'Resources/homer_low_quality.png'
+filename        = 'Resources/qiskit_low_quality.png'
 img             = read(filename)
 grayVector_in   = rgbImage2grayVector(img)
 

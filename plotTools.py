@@ -23,22 +23,21 @@ font = {
 
 def plot(title, x, y, x_err=None, y_err=None,
         colour = DBLUE, marker = '.', markersize = 4, linestyle = '',
-        xlabel = '', ylabel = '',
         show = True):
 
     plt.errorbar(x, y, xerr=x_err, yerr=y_err, color = colour, marker = marker, markersize = markersize, linestyle = linestyle, linewidth = 1)
 
     plt.title(title, fontdict = font)
     plt.grid(True)
-    plt.xlabel(xlabel, fontdict = font)
-    plt.ylabel(ylabel, fontdict = font)
+    plt.xticks([])
+    plt.yticks([])
 
     if (show):
         plt.show()
 ()
 
 
-# x = np.array([0, 1, 2, 3, 4, 5])
-# y = np.array([i**2 + random.random() for i in x])
+x = np.array([0, 1, 2, 3, 4, 5])
+y = np.array([i**2 + random.random() for i in x])
 
-# plot('Test', x, y)
+plot('Test', x, y)
