@@ -106,6 +106,8 @@ venv.bak/
 # amandas stuff
 amanda/
 amanda-main.py
+vqe_plot.py
+
 #gal's stuff
 gal_main.py
 .gitignore

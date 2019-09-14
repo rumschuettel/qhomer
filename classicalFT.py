@@ -1,4 +1,3 @@
-
 import math
 import cmath
 
@@ -11,8 +10,7 @@ def ft(x):
             yk += x[i] * cmath.exp(-(2j*i*k*math.pi/N))
         yk = (1/math.sqrt(N)) * yk
         y.append(yk)
-        print('FT: ' + str(k) + ' out of ' + str(N))
-
+        print('FT: ' + str(k) + '/' + str(N))
     return y
 
 def ift(y):
@@ -24,8 +22,7 @@ def ift(y):
             xk += y[i] * cmath.exp((2j*i*k*math.pi/N))
         xk = (1/math.sqrt(N)) * xk
         x.append(xk)
-        print('IFT: ' + str(k) + ' out of ' + str(N))
-
+        print('IFT: ' + str(k) + '/' + str(N))
     return x
 
 
