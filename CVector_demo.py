@@ -1,4 +1,5 @@
 from classicalFT import *
+from plotTools import *
 from pngTools import *
 from pprint import pprint
 import numpy as np
@@ -15,31 +16,31 @@ with open("./Resources/elephant.9.json") as f:
    data = json.load(f)[:-1]
    data = normalized(np.array([complex(a, b) for a, b in data]))
 
+data = np.array(data).tolist()
+
 
 """
 Fourier transform
 """
 data_ft = ft(data)
-data_ft_abs = [abs(element) for element in data_ft]
 
 
 """
 Inverse Fourier transform
 """
-data_ft_ift   = ift(grayVector_ft)
-data_out      = [abs(element) for element in data_ft_ift]
+data_ft_ift   = ift(data_ft)
 
 
 """
 Show difference in floating point values and images
 """
-# pprint(grayVector_in)
+# pprint(data)
 # divider()
-# pprint(grayVector_ft)
+# pprint(data_ft)
 # divider()
-# pprint(grayVector_ft_ift)
+# pprint(data_ft_ift)
 
 
-show(grayVector2rgbImage(data_in))
-show(grayVector2rgbImage(data_ft_abs))
-show(grayVector2rgbImage(data_out))
+plot_complex_vector(data)
+plot_complex_vector(data_ft)
+plot_complex_vector(data_ft_ift)

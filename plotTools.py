@@ -40,6 +40,10 @@ def complex_to_cartesian(input):
     yy = list(map(lambda y: np.imag(y), input))
     return xx, yy
 
+def plot_complex_vector(cVector):
+    [x, y] = complex_to_cartesian(cVector)
+    plot('', x, y)
+
 
 # x = np.array([0, 1, 2, 3, 4, 5])
 # y = np.array([i**2 + random.random() for i in x])
