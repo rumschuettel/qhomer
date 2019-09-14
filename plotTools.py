@@ -34,7 +34,11 @@ def plot(title, x, y, x_err=None, y_err=None,
 
     if (show):
         plt.show()
-()
+
+def complex_to_cartesian(input):
+    xx = list(map(lambda x: np.real(x), input))
+    yy = list(map(lambda y: np.imag(y), input))
+    return xx, yy
 
 
 # x = np.array([0, 1, 2, 3, 4, 5])

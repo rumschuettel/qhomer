@@ -71,4 +71,4 @@ def eww(file,target):
             count+=len(line)
         if count>target:
             return get_points(file,density-i+1)
-    return None
+    return get_points(file,2)
