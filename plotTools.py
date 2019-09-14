@@ -49,3 +49,13 @@ def plot_complex_vector(cVector):
 # y = np.array([i**2 + random.random() for i in x])
 
 # plot('Test', x, y)
+def matrix_mid_value(mats):
+    #return np.average(np.array([mats]), axis=0,weights=[0.5])
+    # res = np.mean(np.array([mats]), axis=0)
+    res = sum(np.array(mat) for mat in mats)
+    return res/len(mats)
+
+def matrix_weighted_avg(mats, w=[2,2]):
+    res = np.average(np.array(mats), axis=0,weights=w)
+    return res
+
