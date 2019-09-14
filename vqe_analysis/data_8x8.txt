@@ -39,7 +39,6 @@
 2019-09-14 07:04:44,667:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 38 returned -0.0032832322288898325
 2019-09-14 07:04:45,044:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 39 returned -0.0032832322647336184
 2019-09-14 07:04:45,438:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 40 returned -0.0032832323430822307
-
 2019-09-14 07:04:45,965:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 41 returned -0.003283232347719122
 2019-09-14 07:04:46,398:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 42 returned -0.003283232328505257
 2019-09-14 07:04:46,851:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 43 returned -0.0032832323553157925
@@ -107,7 +106,6 @@
 2019-09-14 07:05:18,064:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 105 returned -0.0051107722837685455
 2019-09-14 07:05:18,436:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 106 returned -0.0051107722247960815
 2019-09-14 07:05:18,839:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 107 returned -0.005110772332494947
-
 2019-09-14 07:05:19,242:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 108 returned -0.005110772310032154
 2019-09-14 07:05:19,892:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 109 returned -0.005110772098193435
 2019-09-14 07:05:20,372:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 110 returned -0.005110772258390086
@@ -175,7 +173,6 @@
 2019-09-14 07:05:51,234:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 172 returned -0.008033716312853406
 2019-09-14 07:05:51,611:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 173 returned -0.00803371606463926
 2019-09-14 07:05:52,081:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 174 returned -0.008033716136855605
-
 2019-09-14 07:05:52,474:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 175 returned -0.008033716328867761
 2019-09-14 07:05:52,940:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 176 returned -0.008033716148205628
 2019-09-14 07:05:53,557:qiskit.aqua.algorithms.adaptive.vqe.vqe:INFO: Energy evaluation 177 returned -0.008033716229281949
