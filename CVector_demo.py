@@ -16,30 +16,30 @@ with open("./Resources/elephant.9.json") as f:
    data = normalized(np.array([complex(a, b) for a, b in data]))
 
 
-
 """
 Fourier transform
 """
-grayVector_ft       = ft(grayVector_in)
-grayVector_ft_abs   = [abs(element) for element in grayVector_ft]
+data_ft = ft(data)
+data_ft_abs = [abs(element) for element in data_ft]
 
 
 """
 Inverse Fourier transform
 """
-grayVector_ft_ift   = ift(grayVector_ft)
-grayVector_out      = [abs(element) for element in grayVector_ft_ift]
+data_ft_ift   = ift(grayVector_ft)
+data_out      = [abs(element) for element in data_ft_ift]
+
 
 """
 Show difference in floating point values and images
 """
-pprint(grayVector_in)
-divider()
-pprint(grayVector_ft)
-divider()
-pprint(grayVector_ft_ift)
+# pprint(grayVector_in)
+# divider()
+# pprint(grayVector_ft)
+# divider()
+# pprint(grayVector_ft_ift)
 
-exit()
-show(grayVector2rgbImage(grayVector_in))
-show(grayVector2rgbImage(grayVector_ft_abs))
-show(grayVector2rgbImage(grayVector_out))
+
+show(grayVector2rgbImage(data_in))
+show(grayVector2rgbImage(data_ft_abs))
+show(grayVector2rgbImage(data_out))
