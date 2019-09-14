@@ -36,10 +36,10 @@ def flip_x(input):
     return res
 
 
-def flip_y(input):
+def flip_y(inp):
     """flips the imaginary values of all of the points, do THAT for good results"""
     res = []
-    for line in input:
+    for line in inp:
         #max_y = imag(max(line , key=(lambda y: (imag(y)))))
         res.append(list(map(lambda y: complex(real(y), -imag(y)), line)))
     return res
@@ -62,3 +62,13 @@ def jsonify(lines):
             res.append(tmp)
 
     return json.dumps(res)
+def eww(file,target):
+    density = 10
+    for i in range(density):
+        lines, starts = get_points(file,density -i)
+        count = 0
+        for line in lines:
+            count+=len(line)
+        if count>target:
+            return get_points(file,density-i+1)
+    return None
