@@ -12,12 +12,11 @@ def normalized(arr):
 """
 Get complex numbers
 """
-with open("./Resources/elephant.9.json") as f:
+with open("./Resources/elephant.3.json") as f:
    data = json.load(f)[:-1]
    data = normalized(np.array([complex(a, b) for a, b in data]))
 
 data = np.array(data).tolist()
-
 
 """
 Fourier transform
@@ -34,11 +33,11 @@ data_ft_ift   = ift(data_ft)
 """
 Show difference in floating point values and images
 """
-# pprint(data)
-# divider()
-# pprint(data_ft)
-# divider()
-# pprint(data_ft_ift)
+pprint(data)
+divider()
+pprint(data_ft)
+divider()
+pprint(data_ft_ift)
 
 
 plot_complex_vector(data)
